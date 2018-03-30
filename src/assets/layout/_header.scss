@@ -1,10 +1,55 @@
 .header {
   color: #000;
+  background-color: rgba(255, 255, 255, 0.884);//rgba(231, 203, 64, 0.671); //rgba(144, 28, 7, 0.6);
   text-align: center;
   margin: 0;
-  padding: 2rem 0;
+  padding: 2rem 0 3rem;
+
+  &__title {
+    font-size: 2rem;
+  }
 
   &__subtitle {
     font-family: $content-font;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .header {
+    padding: 0 0 2rem;
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__subtitle {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 672px) {
+  .header {
+    &__wrap {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__start {
+      float: left;
+      margin: 0 $grid-col-padding 0 0;
+      width: calc(100%/12 * 7 - #{$grid-col-padding});
+    }
+
+    &__end {
+      float: left;
+      margin: 0 0 0 $grid-col-padding;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(100%/12 * 5 - #{$grid-col-padding});
+    }
   }
 }

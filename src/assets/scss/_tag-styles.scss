@@ -32,11 +32,21 @@ p {
     padding: 2rem 0;
 }
 
-// .bg {
-//     background: linear-gradient(transparentize(#f8bc44, .7), transparentize(#f8bc44, .7)),
-//     url('/assets/img/sfthcc-bg.jpg') center repeat;
-// }
+.bg {
+    background: transparentize(#8F2B2B, .7);
+}
 
 .page__title {
     text-align: center;
+}
+
+.white-text {
+    color: #fff;
+    display: none;
+}
+
+.vertically-center {
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
