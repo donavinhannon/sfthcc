@@ -1,0 +1,106 @@
+.btn, .btn-ghost,.btn-sharp,.btn-ghost-sharp {
+    align-items: center;
+    box-shadow: none;
+    display: inline-flex;
+    height: 2.25rem;
+    line-height: 1.5;
+    padding-bottom: calc(0.375rem - 1px);
+    padding-top: calc(0.375rem - 1px);
+    position: relative;
+    vertical-align: top;
+    user-select: none;
+    color: #363636;
+    cursor: auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .btn, .btn-ghost,.btn-sharp,.btn-ghost-sharp{
+    margin-bottom: .15rem;
+    margin-top: .15rem;
+  }
+}
+
+.btn {
+  background-color: gainsboro;
+  border: none;
+  border-radius: 4px;
+
+  &--primary {
+    font-family: $content-font;
+    background-color: $color-primary !important;
+    color: $color-font-dark-bg !important;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-primary, 10) !important;
+    }
+  }
+
+  &--secondary {
+    font-family: $content-font;
+    background-color: $color-secondary !important;
+    color: $color-font-dark-bg !important;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-secondary, 10) !important;
+    }
+  }
+
+  &--white-secondary {
+    font-family: $content-font;
+    background-color: #fff !important;
+    color: $color-secondary !important;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#fff, 10) !important;
+    }
+  }
+
+  &--light {
+    font-family: $content-font;
+    background-color: #fff !important;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#fff, 10) !important;
+    }
+  }
+
+  &--full-width {
+      width: 100%;
+  }
+}
+
+// transparent button with outline
+.btn-ghost {
+    border: solid 2px gainsboro;
+    background-color: transparent;
+    border-radius: 3px;
+
+}
+
+// filled button with sharp edges
+.btn-sharp {
+  background-color: gainsboro;
+  border-radius: 0;
+  border: none;
+}
+
+// transparent button with outline and sharp edges
+.btn-ghost-sharp {
+  border: solid 2px gainsboro;
+  background-color: transparent;
+  border-radius: 0;
+}
+

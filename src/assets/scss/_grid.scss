@@ -3,6 +3,7 @@ $grid-columns: 12 !default; // number of columns to use in the grid
 $small-screen: 800px !default; // width for small screen modifyer .is-5--sm
 $small-screen-max: 799px !default; // no calc use b/c lack of Edge support for media queries
 $container-pad-horizontal: 10px !default; // left & right padding on .container
+$grid-col-padding: 10px !default;
 
 
 // GRID STRUCTURE EXAMPLE ========================
@@ -37,15 +38,19 @@ $container-pad-horizontal: 10px !default; // left & right padding on .container
   // Override 100% default width .is-2-3--sm | .is-1-3--sm | etc
   @for $i from 1 through 3 {
     .#{$class-slug}-#{$i}-#{3}--sm {
-      width: calc(100% / 3 * #{$i});
+      width: calc(100% / 3 * #{$i} - #{$grid-col-padding/2});
     }
   }
 
   // Override 100% default width .is-2-5--sm | .is-3-5--sm | etc
   @for $i from 1 through 5 {
     .#{$class-slug}-#{$i}-#{5}--sm {
-      width: calc(100% / 5 * #{$i});
+      width: calc(100% / 5 * #{$i} - #{$grid-col-padding/2});
     }
+  }
+
+  .col {
+    margin-bottom: $grid-col-padding * 3.5;
   }
 }
 
@@ -55,25 +60,38 @@ $container-pad-horizontal: 10px !default; // left & right padding on .container
   // generate class names for each grid column
   @for $i from 1 through $grid-columns {
     .#{$class-slug}-#{$i} {
-      width: calc(100% / 12 * #{$i});
+      width: calc(100% / 12 * #{$i} - #{$grid-col-padding});
     }
   }
 
   // generate class names for grid columns in thirds
   @for $i from 1 through 3 {
     .#{$class-slug}-#{$i}-#{3} {
-      width: calc(100% / 3 * #{$i});
+      width: calc(100% / 3 * #{$i} - #{$grid-col-padding/2});
     }
   }
 
   // generate class names for grid columns in fifths
   @for $i from 1 through 5 {
     .#{$class-slug}-#{$i}-#{5} {
-      width: calc(100% / 5 * #{$i});
+      width: calc(100% / 5 * #{$i} - #{$grid-col-padding/2});
     }
   }
 
   .col {
     float: left;
+    margin: 0 $grid-col-padding/2;
+
+    &:only-child {
+      margin: 0;
+    }
+
+    &:first-child {
+      margin: 0 $grid-col-padding 0 0;
+    }
+
+    &:last-child {
+      margin: 0 0 0 $grid-col-padding;
+    }
   }
 }

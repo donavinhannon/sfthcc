@@ -15,13 +15,12 @@
   <meta property="og:image" content="" />       <!-- IMAGE URL -->
   <!-- Stylesheets, Fonts, Neccessary Scripts -->
   <link rel="stylesheet" href="/assets/css/master.min.css">
-  <link rel="stylesheet" href="/assets/css/navbar/navbar.min.css">
 </head>
 
 <body>
 
   <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
-    <div class="container">
+    <div class="container navbar__container">
 
       <div class="navbar-brand">
         <a class="navbar-item--brand navbar-item" href="/">
@@ -62,11 +61,6 @@
           <a class="navbar-item" href="#">Resources</a>
           <a class="navbar-item" href="#">Photos</a>
           <a class="navbar-item" href="#">Contact </a>
-          <div class="navbar-item">
-            <a class="button" href="https://github.com/Doanvin" target="_blank">
-              <span class="icon"><i class="fa fa-github"></i></span>
-              <span>Github</span>
-            </a>
           </div>
         </div> <!-- end .navbar-end -->
 
@@ -79,8 +73,8 @@
 
 
 
-  <header class="header">
-    <div class="container">
+  <header class="header bg">
+    <div class="container header__container">
       <h1 class="header__title">San Francisco Tlingit &amp; Haida Community Council</h1>
       <p class="header__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam provident iste aspernatur, incidunt.</p>
     </div>
@@ -88,24 +82,60 @@
 
 
 
-  <main>
+  <main class="main">
 
-    <section>
+    <section class="container main__container">
 
       <article class="content">
-        <h2>Upcoming Events</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat modi voluptatem provident quis vel molestiae doloribus eum itaque ex incidunt, repudiandae tempore, eos, iusto cum. Soluta quaerat sunt et!</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti et officiis quam, consectetur quia culpa! Placeat vel dicta saepe, molestias quia ea. Omnis dolore itaque laboriosam quod quibusdam reprehenderit officia!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusantium eius quibusdam eligendi, nostrum earum harum corrupti asperiores laborum, error ipsa expedita vitae perspiciatis dolore ab facere repellat veritatis ea.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati et aliquam pariatur beatae explicabo animi recusandae, maiores autem! Quibusdam repellat voluptates quos tempore sapiente ipsum quas necessitatibus odit vel praesentium.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ad ullam error dolore consequuntur id temporibus numquam, deleniti, perspiciatis sit odit reiciendis. Harum, eos debitis temporibus id neque ea veritatis?</p>
-      </article>
+        <div class="newsletter-section is-card">
+          <h3 class="page__title">Sign Up For Digital Newsletter</h3>
+          <form action="post" class="newsletter">
+            <div class="row">
+              <div class="col is-10">
+                  <input type="text">
+              </div>
+              <div class="col is-2">
+                  <button type="submit" class="btn btn--primary btn--full-width">Subscribe</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="event-section is-card">
+
+            <h2 class="page__title">Upcoming Events</h2>
+
+            <div class="row">
+              <div class="col is-6 event" style="background:url(http://via.placeholder.com/330x220);min-height:220px;background-size:100% 100%;">
+                <h2 class="event__title">Next Event</h2>
+                <div class="event__date">April 15, 2018</div>
+                <div class="event__location">City, State</div>
+              </div>
+    
+              <div class="col is-6 event" style="background:url(http://via.placeholder.com/330x220);min-height:220px;background-size:100% 100%;">
+                <h2 class="event__title">Next Event</h2>
+                <div class="event__date">April 15, 2018</div>
+                <div class="event__location">City, State</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="newsletter">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat modi voluptatem provident quis vel molestiae doloribus eum itaque ex incidunt, repudiandae tempore, eos, iusto cum. Soluta quaerat sunt et!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti et officiis quam, consectetur quia culpa! Placeat vel dicta saepe, molestias quia ea. Omnis dolore itaque laboriosam quod quibusdam reprehenderit officia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusantium eius quibusdam eligendi, nostrum earum harum corrupti asperiores laborum, error ipsa expedita vitae perspiciatis dolore ab facere repellat veritatis ea.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati et aliquam pariatur beatae explicabo animi recusandae, maiores autem! Quibusdam repellat voluptates quos tempore sapiente ipsum quas necessitatibus odit vel praesentium.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ad ullam error dolore consequuntur id temporibus numquam, deleniti, perspiciatis sit odit reiciendis. Harum, eos debitis temporibus id neque ea veritatis?</p>    
+        </div>
+        
+         </article>
 
       <aside class="sidebar">
-        <h2>Sidebar Widgets</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat modi voluptatem provident quis vel molestiae doloribus eum itaque ex incidunt, repudiandae tempore, eos, iusto cum. Soluta quaerat sunt et!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus ducimus sint reiciendis repellat eius possimus voluptates beatae sunt, voluptatem dolor suscipit nam dolores assumenda molestiae labore facere. Possimus, dolore ipsum.</p>
-      </aside>
+        <div class="donate is-card">
+          <h2>Sidebar Widgets</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat modi voluptatem provident quis vel molestiae doloribus eum itaque ex incidunt, repudiandae tempore, eos, iusto cum. Soluta quaerat sunt et!</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus ducimus sint reiciendis repellat eius possimus voluptates beatae sunt, voluptatem dolor suscipit nam dolores assumenda molestiae labore facere. Possimus, dolore ipsum.</p>
+        </div>
+        </aside>
 
     </section>
 
@@ -113,7 +143,7 @@
 
 
   <footer class="footer">
-    <div class="container">
+    <div class="container footer__container">
       <div class="row">
 
         <div class="col is-4">

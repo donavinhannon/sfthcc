@@ -1,8 +1,15 @@
+// COLORS
+$color-primary: #790000;
+$color-secondary: #faf5e4;
+$color-tertiary: #0A7DC5;
+$color-font-dark-bg: #fff;
+
 // NAVBAR OVERRIDE
 $nc: #f8f1dc; // navbar text color
 $nbc: #790000; // navbar bg color
 $nc-item-active: $nbc; // navbar item text color while hovering & active item text color while not hovering
-$nc-brand: #e2b97c; //navbar brand text color
+$nc-brand: #fff; //#e2b97c; //navbar brand text color
 $nbc-item-active-not-hover: #faf5e4; // color of active item when not hovering
 
-// #e2b97c
+// GRID
+$grid-col-padding: 10px;

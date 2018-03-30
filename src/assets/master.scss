@@ -12,7 +12,12 @@
 // IMPORT BASE COMPONENTS || CUSTOM COMPONENTS SHOULD BE LINKED IN HTML
 @import "./scss/typography";
 @import "./scss/tag-styles";
-@import "./components/navbar";
-@import "./components/header";
-@import "./components/content";
-@import "./components/footer";
+@import "./layout/navbar";
+@import "./layout/header";
+@import "./layout/content";
+@import "./layout/sidebar";
+@import "./layout/footer";
+
+@import "./components/events";
+@import "./components/buttons";
+@import "./components/forms";

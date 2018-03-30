@@ -53,6 +53,7 @@ gulp.task('sass', function () {
 // Html Task minimizes html
 gulp.task('html', function() {
     return gulp.src(htmlPaths)
+        .pipe(plumber())
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'))
         .pipe(reload({ stream:true }));
@@ -61,6 +62,7 @@ gulp.task('html', function() {
 // Img Task optimizes images and makes them progressive
 gulp.task('img', function() {
     return gulp.src(imgPaths)
+        .pipe(plumber())
         .pipe(cache(imagemin({ progressive: true })))
         .pipe(gulp.dest('dist/assets/img'))
         .pipe(reload({stream:true}));
@@ -100,10 +102,8 @@ gulp.task('live',  ['browser-sync'], function() {
 });
 
 // Build Task runs all tasks except live and deletes tasks
-gulp.task('build', function() {
-    gulp.start('delete').then( () => {
-        gulp.start('sass', 'js', 'img', 'html', 'font');
-    });
+gulp.task('build', ['delete'], function() {
+    gulp.start('sass', 'js', 'img', 'html', 'font');
 });
 
 // Default Task runs all tasks except live, img, and delete tasks
