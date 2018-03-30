@@ -6,11 +6,18 @@
     padding-top: 2rem;
   }
 
+  &__title {
+    font-size: 1rem;
+  }
+
   &__list {
+    font-family: $content-font;
+    line-height: 1.35;
     padding-left: 0;
   }
 
   &__list-item {
     list-style: none;
+    text-decoration: none;
   }
 }

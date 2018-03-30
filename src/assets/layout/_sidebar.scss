@@ -1,7 +1,16 @@
 .sidebar {
-    margin-left: $grid-col-padding;
+    &__title {
+        font-size: 1.2rem;
+    }
 
     p {
         font-family: $content-font;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+    .sidebar {
+        margin-left: $grid-col-padding;
     }
 }

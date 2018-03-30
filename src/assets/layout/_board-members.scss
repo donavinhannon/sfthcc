@@ -1,0 +1,19 @@
+.board {
+    font-family: $content-font;
+    
+    &__list {
+        line-height: 1.25;
+        padding-left: 0;
+    }
+
+    &__list-item {
+        color: rgb(60, 60, 60);
+        list-style: none;
+        text-decoration: none;
+    }
+
+    &__member-type {
+        color: #000;
+        font-weight: 500;
+    }
+}
