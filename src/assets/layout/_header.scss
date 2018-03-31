@@ -1,23 +1,47 @@
 .header {
   color: #000;
-  background-color: rgba(255, 255, 255, 0.884);//rgba(231, 203, 64, 0.671); //rgba(144, 28, 7, 0.6);
+  background: $header-bgc; //rgba(231, 203, 64, 0.671); //rgba(144, 28, 7, 0.6);
   text-align: center;
   margin: 0;
   padding: 2rem 0 3rem;
+
+  &__container {
+    // background: rgba(221, 221, 221, 0.349);
+  }
 
   &__title {
     font-size: 2rem;
   }
 
   &__subtitle {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    border-radius: 2px;
     font-family: $content-font;
     font-size: 1rem;
+    margin-top: $grid-col-padding*2;
+    padding: $grid-col-padding;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    &__start {
+      width: calc(100%/12 * 6 - #{$grid-col-padding});
+    }
+
+    &__end {
+      width: calc(100%/12 * 6 - #{$grid-col-padding});
+    }
   }
 }
 
 @media only screen and (min-width: 800px) {
   .header {
-    padding: 0 0 2rem;
+    padding: 0;
+    
+    &__container {
+      padding: 0 0 2rem;
+    }
 
     &__title {
       font-size: 3rem;
@@ -40,7 +64,6 @@
     &__start {
       float: left;
       margin: 0 $grid-col-padding 0 0;
-      width: calc(100%/12 * 7 - #{$grid-col-padding});
     }
 
     &__end {
@@ -49,6 +72,21 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    &__subtitle {
+      margin-right: $grid-col-padding;
+    }
+  }
+}
+
+@media screen and (min-width: 672px) and (max-width: 999px) {
+  .header {
+    &__start {
+      width: calc(100%/12 * 7 - #{$grid-col-padding});
+    }
+
+    &__end {
       width: calc(100%/12 * 5 - #{$grid-col-padding});
     }
   }

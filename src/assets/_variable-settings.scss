@@ -4,6 +4,10 @@ $color-secondary: #faf5e4;
 $color-tertiary: #0A7DC5;
 $color-font-dark-bg: #fff;
 
+$footer-bgc: rgb(238, 238, 238);
+$header-bgc: linear-gradient(rgba(221, 221, 221, 0.349), rgba(221, 221, 221, 0.349)), url('/assets/img/sfthcc-bg.jpg');
+$body-bgc: rgba(255, 255, 255, 0.87);//transparentize(#8F2B2B, .2);
+
 // NAVBAR OVERRIDE
 $nc: #f8f1dc; // navbar text color
 $nbc: #790000; // navbar bg color
@@ -13,3 +17,11 @@ $nbc-item-active-not-hover: #faf5e4; // color of active item when not hovering
 
 // GRID
 $grid-col-padding: 10px;
+
+
+// primary maroon #790000
+// slightly lighter maroon #860000
+// light maroon #8F2B2B
+// dark maroon #460000
+// dark blue #072E46
+// light blue #0A7DC5

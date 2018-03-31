@@ -5,7 +5,12 @@
         margin: 0 auto;
         padding: 0 10px;
         max-width: 1200px;
-      }
+    }
+
+    &__section {
+        margin-top: $grid-col-padding*4;
+        margin-bottom: $grid-col-padding*4;
+    }
 }
 
 .content {
@@ -16,6 +21,6 @@
 
 @media only screen and (min-width: 800px) {
     .content {
-        margin-right: $grid-col-padding;
+        margin-right: $grid-col-padding*3;
     }
 }

@@ -79,16 +79,16 @@
 
         <div class="header__wrap">
             <div class="header__start">
-                <picture>
-                  <source srcset="/assets/img/sfthcc-logo-mobile.jpg" media="(max-width: 800px)"/>
-                  <img src="/assets/img/sfthcc-logo.jpg" alt="San Francisco Tlingit &amp; Haida Community Council">
-                </picture>
-                <h1 class="header__title white-text">San Francisco Tlingit &amp; Haida Community Council</h1>
-              </div>
+              <picture>
+                <source srcset="/assets/img/sfthcc-logo-mobile-tw-opt.gif" media="(max-width: 800px)"/>
+                <img src="/assets/img/sfthcc-logo-tw-opt.gif" alt="San Francisco Tlingit &amp; Haida Community Council">
+              </picture>
+              <h1 class="header__title white-text">San Francisco Tlingit &amp; Haida Community Council</h1>
+            </div>
       
-              <div class="header__end vertically-center">
-                <p class="header__subtitle">The San Francisco Tlingit &amp; Haida Community is a dependent Indian community of the Central Council of Tlingit &amp; Haida Indians Tribes of Alaska, a federally recognized Indian tribe.</p>
-              </div>
+            <div class="header__end">
+              <p class="header__subtitle">The San Francisco Tlingit &amp; Haida Community is a dependent Indian community of the Central Council of Tlingit &amp; Haida Indian Tribes of Alaska, a federally recognized Indian tribe.</p>
+            </div>
       
         </div>
 
@@ -104,12 +104,12 @@
     <section class="container main__container">
 
       <article class="content">
-        <div class="newsletter-section is-card">
+        <div class="newsletter-section main__section is-card">
           <h3 class="page__title">Sign Up For Digital Newsletter</h3>
           <form action="post" class="newsletter">
             <div class="row">
               <div class="col is-10">
-                  <input type="text">
+                  <input type="text" placeholder="email address">
               </div>
               <div class="col is-2">
                   <button type="submit" class="btn btn--primary btn--full-width">Subscribe</button>
@@ -117,7 +117,7 @@
             </div>
           </form>
         </div>
-        <div class="event-section is-card">
+        <div class="event-section main__section is-card">
 
             <h2 class="page__title">Upcoming Events</h2>
 
@@ -136,7 +136,7 @@
             </div>
         </div>
 
-        <div class="newsletter is-card">
+        <div class="newsletter main__section is-card">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat modi voluptatem provident quis vel molestiae doloribus eum itaque ex incidunt, repudiandae tempore, eos, iusto cum. Soluta quaerat sunt et!</p>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti et officiis quam, consectetur quia culpa! Placeat vel dicta saepe, molestias quia ea. Omnis dolore itaque laboriosam quod quibusdam reprehenderit officia!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusantium eius quibusdam eligendi, nostrum earum harum corrupti asperiores laborum, error ipsa expedita vitae perspiciatis dolore ab facere repellat veritatis ea.</p>
@@ -147,14 +147,14 @@
          </article>
 
       <aside class="sidebar">
-        <div class="donate is-card">
+        <div class="donate sidebar__widget">
           <h4 class="sidebar__title">Sidebar Widgets</h4>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat modi voluptatem provident quis vel molestiae doloribus eum itaque ex incidunt, repudiandae tempore, eos, iusto cum. Soluta quaerat sunt et!</p>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus ducimus sint reiciendis repellat eius possimus voluptates beatae sunt, voluptatem dolor suscipit nam dolores assumenda molestiae labore facere. Possimus, dolore ipsum.</p>
         </div>
 
-        <div class="board is-card">
-          <h4 class="sidebar__title">Current Board Members</h4>
+        <div class="board sidebar__widget">
+          <h4 class="sidebar__title">Board of Directors</h4>
           <ul class="board__list">
             <li class="board__list-item"><span class="board__member-type">President:</span> DonnaRae James</li>
             <li class="board__list-item"><span class="board__member-type">Vice President:</span> Natalie Suan</li>
@@ -204,6 +204,12 @@
         </div>
 
       </div>
+
+      <div class="row">
+        <div class="col is-12 footer__bottom">
+          © Copyright <span id="year"></span> | San Francisco Tlingit &amp; Haida Community Council
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -237,6 +243,14 @@
       }
 
     });
+  </script>
+
+  <!-- Get year for copyright end date -->
+  <script>
+    var $year = document.getElementById('year');
+    var d = new Date();
+    var year = d.getFullYear();
+    $year.innerText = year;
   </script>
 
 </body>
