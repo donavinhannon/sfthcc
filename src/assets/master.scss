@@ -3,6 +3,7 @@
 @import "./scss/border-box-normalize";
 
 // OVERRIDE DEFAULT VARIABLES 
+@import "./typography";
 @import "./variable-settings";
 
 // IMPORT GRID
@@ -10,15 +11,17 @@
 @import "./scss/grid";
 
 // IMPORT BASE COMPONENTS || CUSTOM COMPONENTS SHOULD BE LINKED IN HTML
-@import "./scss/typography";
 @import "./scss/tag-styles";
 @import "./layout/navbar";
 @import "./layout/header";
-@import "./layout/content";
+@import "./layout/main-content";
+@import "./layout/news";
 @import "./layout/sidebar";
 @import "./layout/footer";
 
 @import "./components/events";
 @import "./layout/board-members";
+@import "./components/donate";
+@import "./components/newsletter";
 @import "./components/buttons";
 @import "./components/forms";

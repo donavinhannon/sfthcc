@@ -1,0 +1,38 @@
+$color-main-title: #000 !default;
+$size-main-title: 2.5rem !default;
+$bgc-body: rgba(255, 255, 255, 0.87) !default;
+
+.main {
+    padding: 3rem 0;
+    width: 100%;
+
+    &__container {
+        margin: 0 auto;
+        padding: 0 10px;
+        max-width: 1200px;
+    }
+
+    &__section {
+        margin-top: $grid-col-padding*6;
+        margin-bottom: $grid-col-padding*6;
+    }
+
+    &__title {
+        color: $color-main-title;
+        font-size: $size-main-title;
+        padding-bottom: 1rem;
+        text-align: left;
+    }
+}
+
+.content {
+    p {
+        font-family: $content-font;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .content {
+        margin-right: $grid-col-padding*3;
+    }
+}

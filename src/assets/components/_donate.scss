@@ -1,0 +1,12 @@
+$color-donate-btn: #f9bf37 !default;
+$color-donate-title: #f9bf37 !default;
+
+.donate {
+    &__title {
+        color: $color-donate-title;
+    }
+
+    &__button {
+        background-color: $color-donate-btn;
+    }
+}

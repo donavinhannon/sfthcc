@@ -1,19 +1,42 @@
-// COLORS
+// MAIN COLORS
 $color-primary: #790000;
-$color-secondary: #faf5e4;
+$color-secondary: #f9bf37;
 $color-tertiary: #0A7DC5;
 $color-font-dark-bg: #fff;
 
-$footer-bgc: rgb(238, 238, 238);
-$header-bgc: linear-gradient(rgba(221, 221, 221, 0.349), rgba(221, 221, 221, 0.349)), url('/assets/img/sfthcc-bg.jpg');
-$body-bgc: rgba(255, 255, 255, 0.87);//transparentize(#8F2B2B, .2);
+// TITLE COLORS
+$color-title-primary: #793700;
+$color-title-secondary: lighten($color-title-primary, 8);
+$color-main-title: $color-primary;
+$color-newsletter-title: $color-primary;
+$color-event-title: rgb(129, 125, 125);
+$color-sidebar-title: $color-title-secondary;
+$color-footer-title: transparentize($color-primary, 0);
+
+// TITLE SIZES
+$size-main-title: 2.25rem;
+
+// BACKGROUND COLORS
+$bgc-footer: rgb(238, 238, 238);
+$bg-header: linear-gradient(rgba(221, 221, 221, 0.349), rgba(221, 221, 221, 0.349)), url('/assets/img/sfthcc-bg.jpg');
+$bgc-body: rgba(255, 255, 255, 0.87);//transparentize(#8F2B2B, .2);
+$bgc-sidebar-widget: $bgc-footer;
+
+// FONTS | FAMILIES, SIZES, COLORS
+$footer-font: $content-font;
+$a-link-color: rgb(53, 53, 53);
+$a-hover-color: rgb(61, 38, 38);
+$a-active-color: $a-hover-color;
+
+// BUTTONS
+
 
 // NAVBAR OVERRIDE
 $nc: #f8f1dc; // navbar text color
-$nbc: #790000; // navbar bg color
-$nc-item-active: $nbc; // navbar item text color while hovering & active item text color while not hovering
-$nc-brand: #fff; //#e2b97c; //navbar brand text color
-$nbc-item-active-not-hover: #faf5e4; // color of active item when not hovering
+$nbc: $color-primary; // navbar bg color
+$nc-item-active: #f8f1dc;//$nbc; // navbar item text color while hovering & active item text color while not hovering
+$nc-brand: $nc; //#e2b97c; //navbar brand text color
+$nbc-item-active-not-hover: #B37745;//#faf5e4; // color of active item when not hovering
 
 // GRID
 $grid-col-padding: 10px;

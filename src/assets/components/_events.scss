@@ -1,0 +1,39 @@
+$color-event-title: rgba(70, 49, 10, 0.897) !default;
+
+.event {
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 rgba(46,62,72,.12),
+                0 2px 4px 0 rgba(46,62,72,.12);
+    border-radius: 8px;
+    font-family: $content-font;
+    padding: 0;
+
+    &__title {
+        color: $color-event-title;
+        padding: $grid-col-padding $grid-col-padding $grid-col-padding/2;
+    }
+
+    &__date {
+        color: rgb(60, 60, 60);
+        padding: $grid-col-padding/2 $grid-col-padding $grid-col-padding/2;
+    }
+
+    &__location {
+        color: rgb(60, 60, 60);
+        padding: $grid-col-padding/2 $grid-col-padding $grid-col-padding;
+    }
+
+    &__img {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        min-height:220px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .event__title {
+        min-height: 58px;
+    }
+}

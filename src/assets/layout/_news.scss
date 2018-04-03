@@ -1,0 +1,11 @@
+.news {
+    &__title {
+        color: rgb(129, 125, 125);
+        padding-bottom: 0;
+        padding-top: .67rem;
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+    }
+}

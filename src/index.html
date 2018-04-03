@@ -104,55 +104,69 @@
     <section class="container main__container">
 
       <article class="content">
-        <div class="newsletter-section main__section is-card">
-          <h3 class="page__title">Sign Up For Digital Newsletter</h3>
+
+        <!-- Newsletter section -->
+        <div class="newsletter main__section is-card">
+          <h3 class="newsletter__title">Sign Up For Digital Newsletter</h3>
           <form action="post" class="newsletter">
             <div class="row">
-              <div class="col is-10">
-                  <input type="text" placeholder="email address">
-              </div>
-              <div class="col is-2">
-                  <button type="submit" class="btn btn--primary btn--full-width">Subscribe</button>
-              </div>
+              <div class="col is-6"><input type="text" name="first_name" id="first_name" placeholder="First Name"></div>
+              <div class="col is-6"><input type="text" name="last_name" id="last_name" placeholder="Last Name"></div>
+            </div>
+            <div class="row">
+              <div class="col is-10"><input type="text" name="email_address" id="email_address" placeholder="Email Address"></div>
+              <div class="col is-2"><button type="submit" class="btn btn--primary btn--full-width">Subscribe</button></div>
             </div>
           </form>
         </div>
-        <div class="event-section main__section is-card">
 
-            <h2 class="page__title">Upcoming Events</h2>
+        <!-- Event section -->
+        <div class="main__section">
+
+            <h2 class="main__title">Upcoming Events</h2>
 
             <div class="row">
-              <div class="col is-6 event" style="background:url(http://via.placeholder.com/330x220);min-height:220px;background-size:100% 100%;">
-                <h3 class="event__title">Next Event</h3>
+              <div class="col is-6 event">
+                <h3 class="event__title">Whitepaper Wednesday Lightning</h3>
                 <div class="event__date">April 15, 2018</div>
-                <div class="event__location">City, State</div>
+                <div class="event__location">New York, NY</div>
+                <div class="event__img"  style="background-image:url(https://placeimg.com/330/220/people);"></div>
               </div>
     
-              <div class="col is-6 event" style="background:url(http://via.placeholder.com/330x220);min-height:220px;background-size:100% 100%;">
-                <h3 class="event__title">Next Event</h3>
-                <div class="event__date">April 15, 2018</div>
-                <div class="event__location">City, State</div>
+              <div class="col is-6 event">
+                <h3 class="event__title">Annual Picnic</h3>
+                <div class="event__date">May 27, 2018</div>
+                <div class="event__location">Isleton, CA</div>
+                <div class="event__img" style="background-image:url(https://placekitten.com/330/220);"></div>
               </div>
             </div>
         </div>
 
-        <div class="newsletter main__section is-card">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat modi voluptatem provident quis vel molestiae doloribus eum itaque ex incidunt, repudiandae tempore, eos, iusto cum. Soluta quaerat sunt et!</p>
+        <!-- News section -->
+        <div class="news main__section">
+          <h2 class="main__title">Recent News</h2>
+            <h3 class="news__title">Delegate Trip to Tribal Assembly</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti et officiis quam, consectetur quia culpa! Placeat vel dicta saepe, molestias quia ea. Omnis dolore itaque laboriosam quod quibusdam reprehenderit officia!</p>
+            <h3 class="news__title">Summer Picnic Date Change</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusantium eius quibusdam eligendi, nostrum earum harum corrupti asperiores laborum, error ipsa expedita vitae perspiciatis dolore ab facere repellat veritatis ea.</p>
+            <h3 class="news__title">Chrismas Party Venue Announced</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati et aliquam pariatur beatae explicabo animi recusandae, maiores autem! Quibusdam repellat voluptates quos tempore sapiente ipsum quas necessitatibus odit vel praesentium.</p>
+            <h3 class="news__title">Stanford Pow Wow Review</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ad ullam error dolore consequuntur id temporibus numquam, deleniti, perspiciatis sit odit reiciendis. Harum, eos debitis temporibus id neque ea veritatis?</p>    
         </div>
         
          </article>
 
       <aside class="sidebar">
+
+        <!-- Donate Widget -->
         <div class="donate sidebar__widget">
-          <h4 class="sidebar__title">Sidebar Widgets</h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi placeat modi voluptatem provident quis vel molestiae doloribus eum itaque ex incidunt, repudiandae tempore, eos, iusto cum. Soluta quaerat sunt et!</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus ducimus sint reiciendis repellat eius possimus voluptates beatae sunt, voluptatem dolor suscipit nam dolores assumenda molestiae labore facere. Possimus, dolore ipsum.</p>
+          <h4 class="donate__title sidebar__title">Donate</h4>
+          <p>Help support local Tlingit &amp; Haida events and youth higher education.</p>
+          <a href="#" class="btn btn--secondary btn--full-width">Donate</a>
         </div>
 
+        <!-- Board of Directors Widget -->
         <div class="board sidebar__widget">
           <h4 class="sidebar__title">Board of Directors</h4>
           <ul class="board__list">
@@ -164,6 +178,12 @@
             <li class="board__list-item"><span class="board__member-type">At Large:</span> Jay Silva</li>
             <li class="board__list-item"><span class="board__member-type">At Large:</span> Robin Montano</li>
           </ul>
+        </div>
+
+        <!-- Social Widget -->
+        <div class="social sidebar__widget">
+          <h4 class="sidebar__title">Find Us On Facebook</h4>
+          <a href="https://www.facebook.com/sfthcc" class="btn btn--fb">Facebook</a>
         </div>
       </aside>
 

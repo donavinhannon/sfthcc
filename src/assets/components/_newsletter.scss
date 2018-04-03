@@ -1,3 +1,8 @@
+$color-newsletter-title: #000 !default;
+
 .newsletter {
-    @include card;
+    &__title {
+        color: $color-newsletter-title;
+        text-align: center;
+    }
 }

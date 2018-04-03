@@ -1,13 +1,14 @@
+$bg-header: linear-gradient(rgba(221, 221, 221, 0.349), rgba(221, 221, 221, 0.349)) !default;
+
 .header {
-  color: #000;
-  background: $header-bgc; //rgba(231, 203, 64, 0.671); //rgba(144, 28, 7, 0.6);
+  background: $bg-header; //rgba(231, 203, 64, 0.671); //rgba(144, 28, 7, 0.6);
   text-align: center;
   margin: 0;
   padding: 2rem 0 3rem;
 
-  &__container {
-    // background: rgba(221, 221, 221, 0.349);
-  }
+  // &__container {
+  //   background: rgba(221, 221, 221, 0.349);
+  // }
 
   &__title {
     font-size: 2rem;

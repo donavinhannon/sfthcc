@@ -1,9 +1,24 @@
+$color-sidebar-title: #000 !default;
+$bgc-sidebar-widget: rgb(224, 224, 224) !default;
+
 .sidebar {
     &__widget {
+        background-color: $bgc-sidebar-widget;
+        border-radius: 2px;
         margin-bottom: 1.5rem;
+        padding: $grid-col-padding;
+
+        &:nth-child(odd) {
+            // background: transparentize(lighten($color-primary, 0),.75);
+        }
+
+        &:nth-child(even) {
+            // background: transparentize(darken($color-secondary, 5),0);
+        }
     }
 
     &__title {
+        color: $color-sidebar-title;
         font-size: 1.2rem;
         padding-bottom: 0;
     }
