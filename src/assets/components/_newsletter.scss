@@ -5,4 +5,8 @@ $color-newsletter-title: #000 !default;
         color: $color-newsletter-title;
         text-align: center;
     }
+
+    & form {
+        padding-top: $grid_col_padding;
+    }
 }
