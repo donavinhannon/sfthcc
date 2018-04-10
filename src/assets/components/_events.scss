@@ -1,4 +1,5 @@
-$color-event-title: rgba(70, 49, 10, 0.897) !default;
+$color-event-title: #2e3e48 !default;
+$color-event-title-hover: darken($color-event-title, 10) !default;
 
 .event {
     background-color: #fff;
@@ -11,6 +12,16 @@ $color-event-title: rgba(70, 49, 10, 0.897) !default;
     &__title {
         color: $color-event-title;
         padding: $grid-col-padding $grid-col-padding $grid-col-padding/2;
+
+        & a {
+            color: $color-event-title;
+            text-decoration: none;
+
+            &:hover {
+                color: $color-event-title-hover;
+                text-decoration: underline;
+            }
+        }
     }
 
     &__date {

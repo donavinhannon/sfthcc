@@ -6,12 +6,13 @@ $color-font-dark-bg: #fff;
 
 // TITLE COLORS
 $color-title-primary: #793700;
-$color-title-secondary: lighten($color-title-primary, 8);
+$color-title-secondary: #C45900;
 $color-main-title: $color-primary;
 $color-newsletter-title: $color-primary;
-$color-event-title: rgb(129, 125, 125);
+$color-event-title: $color-title-secondary;
+$color-news-title: $color-title-secondary;
 $color-sidebar-title: $color-title-secondary;
-$color-footer-title: transparentize($color-primary, 0);
+$color-footer-title: transparentize($color-primary, .2);
 
 // TITLE SIZES
 $size-main-title: 2.25rem;
