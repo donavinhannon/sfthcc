@@ -34,36 +34,53 @@ $color-font-dark-bg: #f2f2f2 !default;
   }
 }
 
+// filled btn style (default)
+$btn-box-shadow: 0 1px 4px 0 rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.12);
+$btn-animation: ease-in-out;
+$btn-transitions: color .2s $btn-animation,background-color .2s $btn-animation,border-color .2s $btn-animation,box-shadow .2s $btn-animation;
 .btn {
   background-color: gainsboro;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
   cursor: pointer;
+  font-family: $content-font;
+
+  &:hover,
+  &:focus {
+    transition: $btn-transitions;
+  }
 
   &--primary {
-    font-family: $content-font;
     background-color: $color-primary;
-    color: $color-font-dark-bg;
+    color: $color-font-dark-bg !important;
+    transition: $btn-transitions;
 
     &:hover,
     &:focus {
-      background-color: lighten($color-primary, 10) !important;
+      background-color: lighten($color-primary, 10);
+      box-shadow: $btn-box-shadow;
+    }
+
+    &:hover.is-active,
+    &:focus.is-active {
+      background-color: $color-primary !important;
+      box-shadow: none;
     }
   }
 
   &--secondary {
-    font-family: $content-font;
     background-color: $color-secondary !important;
     color: $color-font-dark-bg !important;
+    transition: $btn-transitions;
 
     &:hover,
     &:focus {
-      background-color: lighten($color-secondary, 10) !important;
+      background-color: darken($color-secondary, 10) !important;
+      box-shadow: $btn-box-shadow;
     }
   }
 
   &--white-secondary {
-    font-family: $content-font;
     background-color: #fff !important;
     color: $color-secondary !important;
 
@@ -73,8 +90,7 @@ $color-font-dark-bg: #f2f2f2 !default;
     }
   }
 
-  &--light {
-    font-family: $content-font;
+  &--light {font-family: $content-font;
     background-color: #fff !important;
 
     &:hover,
@@ -86,14 +102,49 @@ $color-font-dark-bg: #f2f2f2 !default;
   &--full-width {
       width: 100%;
   }
+
+  &--fb {
+    background-color: #3b5998 !important;
+    color: #fff !important;
+    transition: $btn-transitions;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#3b5998, 10) !important;
+      box-shadow: $btn-box-shadow;
+    }
+  }
 }
 
 // transparent button with outline
+$btn-ghost-box-shadow: 0 3px 4px rgba(50,50,50,.35);
+$btn-ghost-box-shadow-active: 0 3px 4px rgba(0,0,0,.35);
 .btn-ghost {
-    border: solid 2px gainsboro;
-    background-color: transparent;
-    border-radius: 3px;
+  border: solid 2px gainsboro;
+  background-color: transparent;
+  border-radius: 30px;
+  color: gainsboro;
+  cursor: pointer;
+  font-family: $content-font;
 
+  &--primary {
+    border-color: $color-primary !important;
+    color: $color-primary !important;
+
+    &:hover,
+    &:focus {
+      transition: $btn-transitions;
+      box-shadow: $btn-ghost-box-shadow;
+      // text-decoration: solid underline rgba(184, 14, 14, 0.253);
+    }
+
+    &:focus {outline: solid 2px rgba(41, 157, 224, 0.35);}
+
+    &.is-active{
+      transform: none;
+      box-shadow: $btn-ghost-box-shadow-active;
+    }
+  }
 }
 
 // filled button with sharp edges
@@ -101,6 +152,9 @@ $color-font-dark-bg: #f2f2f2 !default;
   background-color: gainsboro;
   border-radius: 0;
   border: none;
+  cursor: pointer;
+  font-family: $content-font;
+  transition: $btn-transitions;
 }
 
 // transparent button with outline and sharp edges
@@ -108,5 +162,20 @@ $color-font-dark-bg: #f2f2f2 !default;
   border: solid 2px gainsboro;
   background-color: transparent;
   border-radius: 0;
+  cursor: pointer;
+  font-family: $content-font;
+  transition: $btn-transitions;
 }
 
+@media screen and (min-width: 469px) {
+  .search-button:last-of-type {
+    margin-left: .5rem;
+  }
+  .search-button:first-of-type {
+    margin-right: .5rem;
+  }
+  .search-button {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
+}

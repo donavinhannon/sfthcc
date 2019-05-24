@@ -1,94 +1,271 @@
-$bg-header: linear-gradient(rgba(221, 221, 221, 0.349), rgba(221, 221, 221, 0.349)) !default;
+$bg-header: #2e5a72 !default;
+$mobile: 672px;
+$laptop: 1366px;
+$hd: 1920;
 
 .header {
-  background: $bg-header;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
   margin: 0;
-  padding: 2rem 0 3rem;
 
-  // &__container {
-  //   background: rgba(221, 221, 221, 0.349);
-  // }
+  h1.header__title,
+  h2.header__title,
+  h3.header__title {
+    color: #fff;
+  }
+
+  &--home {
+    background-color: $bg-header;
+    padding: 2rem 0;
+  }
+
+  &--single-page {
+    background-color:#2B7E7E;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+    margin-bottom: 0;
+  }
 
   &__title {
-    font-size: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: $grid-col-padding;
   }
 
   &__subtitle {
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
-    border-radius: 2px;
+    color: #fff;
     font-family: $content-font;
     font-size: 1rem;
-    margin-top: $grid-col-padding*2;
-    padding: $grid-col-padding;
+    padding-top: 0;
+  }
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__start,
+  &__end {
+  flex-basis: 100%;
+  padding: $grid-col-padding;
+  }
+
+  &__start {
+    background-color: #2B7E7E;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__end {
+    background-color: #FFECEC;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: auto;
+    text-align: left;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header__start {
+    flex: 6.5; //70% of its container
+    min-height: 280px;
+  }
+
+  .header__end {
+    flex: 3.5; // 30% of its container
   }
 }
 
-@media only screen and (min-width: 1000px) {
-  .header {
-    &__start {
-      width: calc(100%/12 * 6 - #{$grid-col-padding});
-    }
+@media screen and (max-width: 800px) {
+  .header--page {
+    padding-bottom: $grid-col-padding*3;
 
-    &__end {
-      width: calc(100%/12 * 6 - #{$grid-col-padding});
+    .header__start {
+      border-top-right-radius: 4px;
+      border-bottom-left-radius: 0;
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  .header {
+    &__title {
+      font-size: 1.5rem;
+    }
+  
+    &__subtitle {
+      font-size: 1rem;
     }
   }
 }
 
-@media only screen and (min-width: 800px) {
+// Mobile specific background image, font-sizes and padding
+@media only screen and (max-width: $mobile) {
   .header {
-    padding: 0;
-    
-    &__container {
-      padding: 0 0 2rem;
+    &--home {
+      background-image: $bg-header-mobile;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      margin-top: $grid-col-padding;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Laptop specific background image, font-sizes and padding
+@media only screen and (min-width: $mobile) and (max-width: $laptop) {
+  .header {
+    &--home {
+      background: $bg-header-laptop;
+    }
+
+    &--page {
+      margin: 0 0 $grid-col-padding*6;
+    }
+
+    &__title {
+      font-size: 2.25rem;
+    }
+
+    &__subtitle {
+      font-size: 1.35rem;
+    }
+  }
+}
+
+// Desktop specific background image, font-sizes and padding
+@media only screen and (min-width: $laptop) {
+  .header {
+    &--home {
+      background: $bg-header-hd;
+    }
+
+    &--page {
+      margin: 0 0 $grid-col-padding*6;
     }
 
     &__title {
       font-size: 3rem;
+
+      &--page {
+        font-size: 2.75rem;
+      }
     }
 
     &__subtitle {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
   }
 }
 
-@media only screen and (min-width: 672px) {
+// FullHD+ specific background image
+@media only screen and (min-width: $hd) {
   .header {
-    &__wrap {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+    // &--home {
+    //   background: $bg-header-fullhd;
+    // }
 
-    &__start {
-      float: left;
-      margin: 0 $grid-col-padding 0 0;
-    }
-
-    &__end {
-      float: left;
-      margin: 0 0 0 $grid-col-padding;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__subtitle {
-      margin-right: $grid-col-padding;
+    &__title {
+      &--page {
+        font-size: 3.25rem;
+      }
     }
   }
 }
 
-@media screen and (min-width: 672px) and (max-width: 999px) {
-  .header {
-    &__start {
-      width: calc(100%/12 * 7 - #{$grid-col-padding});
-    }
+// @media only screen and (min-width: 1000px) {
+//   .header {
+//     &__start {
+//       width: calc(100%/12 * 6 - #{$grid-col-padding});
+//     }
 
-    &__end {
-      width: calc(100%/12 * 5 - #{$grid-col-padding});
-    }
-  }
-}
+//     &__end {
+//       width: calc(100%/12 * 6 - #{$grid-col-padding});
+//     }
+//   }
+// }
+
+// @media only screen and (min-width: 800px) {
+//   .header {
+//     padding: 0;
+    
+//     &__container {
+//       padding: 0 0 2rem;
+//     }
+
+//     &__title {
+//       font-size: 3rem;
+//     }
+
+//     &__subtitle {
+//       font-size: 1.4rem;
+//     }
+//   }
+// }
+
+// @media only screen and (min-width: 672px) {
+//   .header {
+    // &__wrap {
+    //   display: flex;
+    //   flex-direction: row;
+    //   flex-wrap: wrap;
+    // }
+
+//     &__start {
+//       float: left;
+//       margin: 0 $grid-col-padding 0 0;
+//     }
+
+//     &__end {
+//       float: left;
+//       margin: 0 0 0 $grid-col-padding;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//     }
+
+//     &__subtitle {
+//       margin-right: $grid-col-padding;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 672px) and (max-width: 999px) {
+//   .header {
+//     &__start {
+//       width: calc(100%/12 * 7 - #{$grid-col-padding});
+//     }
+
+//     &__end {
+//       width: calc(100%/12 * 5 - #{$grid-col-padding});
+//     }
+//   }
+// }

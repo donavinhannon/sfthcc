@@ -18,3 +18,14 @@
         font-weight: 500;
     }
 }
+
+.board__list-item > a {
+    color: #353535;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 950px) and (max-width: 1055px) {
+    .board__list-item {
+        font-size: 15px;
+    }
+}

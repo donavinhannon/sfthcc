@@ -6,7 +6,7 @@ $color-font-dark-bg: #fff;
 
 // TITLE COLORS
 $color-title-primary: #793700;
-$color-title-secondary: #C45900;
+$color-title-secondary: #945826;
 $color-main-title: $color-primary;
 $color-newsletter-title: $color-primary;
 $color-event-title: $color-title-secondary;
@@ -19,9 +19,13 @@ $size-main-title: 2.25rem;
 
 // BACKGROUND COLORS
 $bgc-footer: rgb(238, 238, 238);
-$bg-header: linear-gradient(rgba(221, 221, 221, 0.349), rgba(221, 221, 221, 0.349)), url('/assets/img/sfthcc-bg.jpg');
+$bg-header-mobile: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/uploads/2018/04/sf_sunrise_mobile.jpg');
+$bg-header-laptop: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/uploads/2018/04/sf_sunrise_laptop.jpg');
+$bg-header-hd: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/uploads/2018/04/sf_sunrise_hd.jpg');
+$bg-header-fullhd: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/uploads/2018/04/sf_sunrise_fullhd.jpg');
 $bgc-body: rgba(255, 255, 255, 0.87);//transparentize(#8F2B2B, .2);
 $bgc-sidebar-widget: $bgc-footer;
+// /wp-content/uploads/2018/04/
 
 // FONTS | FAMILIES, SIZES, COLORS
 $footer-font: $content-font;
@@ -35,9 +39,12 @@ $a-active-color: $a-hover-color;
 // NAVBAR OVERRIDE
 $nc: #f8f1dc; // navbar text color
 $nbc: $color-primary; // navbar bg color
+$nbc-dropdown: #730000; //navbar dropdown bg color
 $nc-item-active: #f8f1dc;//$nbc; // navbar item text color while hovering & active item text color while not hovering
 $nc-brand: $nc; //#e2b97c; //navbar brand text color
 $nbc-item-active-not-hover: #B37745;//#faf5e4; // color of active item when not hovering
+$nc-dropdown-carrot: $nc; // color of carrot on dropdown items in menu
+$navbar-brand-font-size: 2rem;
 
 // GRID
 $grid-col-padding: 10px;

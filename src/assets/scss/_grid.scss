@@ -1,7 +1,9 @@
-$class-slug: is !default; // .is-3 with .is-9 etc
+$class-slug: is !default; // .is-3  .is-9 etc
 $grid-columns: 12 !default; // number of columns to use in the grid
-$small-screen: 800px !default; // width for small screen modifyer .is-5--sm
-$small-screen-max: 799px !default; // no calc use b/c lack of Edge support for media queries
+$small-screen: 768px !default; // width for small screen modifyer .is-5--sm
+$small-screen-max: 767 !default; // no calc use b/c lack of Edge support for media queries
+$medium-screen: 1024px !default;
+$medium-screen-max: 1023px !default;
 $container-pad-horizontal: 10px !default; // left & right padding on .container
 $grid-col-padding: 10px !default;
 
@@ -24,6 +26,10 @@ $grid-col-padding: 10px !default;
   display: table;
 }
 
+.row {
+  margin-bottom: $grid-col-padding*2;
+}
+
 @for $i from 1 through $grid-columns {
   .#{$class-slug}-#{$i} {
     width: 100%;
@@ -35,6 +41,13 @@ $grid-col-padding: 10px !default;
 
 // SMALL SCREENS ONLY ============================
 @media only screen and (max-width: $small-screen-max) {
+    // Override 100% default width .is-1-2--sm etc
+    @for $i from 1 through 2 {
+      .#{$class-slug}-#{$i}-#{2}--sm {
+        width: calc(100% / 2 * #{$i} - #{$grid-col-padding/2});
+      }
+    }
+
   // Override 100% default width .is-2-3--sm | .is-1-3--sm | etc
   @for $i from 1 through 3 {
     .#{$class-slug}-#{$i}-#{3}--sm {
@@ -49,32 +62,27 @@ $grid-col-padding: 10px !default;
     }
   }
 
+  .row {
+    margin-bottom: 0;
+  }
+
   .col {
     margin-bottom: $grid-col-padding;
   }
 }
 
-
-// LARGE SCREENS ONLY ============================
+// MEDIUM SCREENS ONLY ============================
 @media only screen and (min-width: $small-screen) {
   // generate class names for each grid column
   @for $i from 1 through $grid-columns {
-    .#{$class-slug}-#{$i} {
-      width: calc(100% / 12 * #{$i} - #{$grid-col-padding});
-    }
-  }
-
-  // generate class names for grid columns in thirds
-  @for $i from 1 through 3 {
-    .#{$class-slug}-#{$i}-#{3} {
-      width: calc(100% / 3 * #{$i} - #{$grid-col-padding/2});
-    }
-  }
-
-  // generate class names for grid columns in fifths
-  @for $i from 1 through 5 {
-    .#{$class-slug}-#{$i}-#{5} {
-      width: calc(100% / 5 * #{$i} - #{$grid-col-padding/2});
+    @if $i == 12 {
+      .#{$class-slug}-#{$i} {
+        width: calc(100% / 12 * #{$i});
+      }
+    } @else {
+      .#{$class-slug}-#{$i} {
+        width: calc(100% / 12 * #{$i} - #{$grid-col-padding});
+      }
     }
   }
 
@@ -82,16 +90,72 @@ $grid-col-padding: 10px !default;
     float: left;
     margin: 0 $grid-col-padding/2;
 
-    &:first-child {
-      margin: 0 $grid-col-padding 0 0;
-    }
-
-    &:last-child {
-      margin: 0 0 0 $grid-col-padding;
-    }
-
-    &:only-child {
+    &:only-of-type {
       margin: 0;
+    }
+
+    &:first-of-type:last-of-type{
+      margin: 0;
+    }
+
+    &:last-of-type {
+      margin: 0 0 0 $grid-col-padding/2;
+    }
+
+    &:first-of-type {
+      margin: 0 $grid-col-padding/2 0 0;
+    }
+  }
+}
+
+
+// LARGE SCREENS ONLY ============================
+@media only screen and (min-width: $medium-screen) {
+  // generate class names for each grid column
+  @for $i from 1 through $grid-columns {
+    @if $i == 12 {
+      .#{$class-slug}-#{$i} {
+        width: calc(100% / 12 * #{$i});
+      }
+    } @else {
+      .#{$class-slug}-#{$i} {
+        width: calc(100% / 12 * #{$i} - #{$grid-col-padding});
+      }
+    }
+  }
+
+  // // generate class names for grid columns in thirds
+  // @for $i from 1 through 3 {
+  //   .#{$class-slug}-#{$i}-#{3} {
+  //     width: calc(100% / 3 * #{$i} - #{$grid-col-padding/2});
+  //   }
+  // }
+
+  // // generate class names for grid columns in fifths
+  // @for $i from 1 through 5 {
+  //   .#{$class-slug}-#{$i}-#{5} {
+  //     width: calc(100% / 5 * #{$i} - #{$grid-col-padding/2});
+  //   }
+  // }
+
+  .col {
+    float: left;
+    margin: 0 $grid-col-padding/2;
+
+    &:only-of-type {
+      margin: 0;
+    }
+
+    &:first-of-type:last-of-type{
+      margin: 0;
+    }
+
+    &:last-of-type {
+      margin: 0 0 0 $grid-col-padding/2;
+    }
+
+    &:first-of-type {
+      margin: 0 $grid-col-padding/2 0 0;
     }
   }
 }

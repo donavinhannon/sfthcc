@@ -24,14 +24,32 @@ $color-event-title-hover: darken($color-event-title, 10) !default;
         }
     }
 
-    &__date {
+    &__host {
         color: rgb(60, 60, 60);
         padding: $grid-col-padding/2 $grid-col-padding $grid-col-padding/2;
     }
 
+    &__date-box {
+        position: absolute;
+        display: inline-block;
+        margin-top: -28px;
+        margin-left: $grid-col-padding;
+        border-radius: 50%;
+        background-color:rgba(132, 0, 0, .95);
+        color: #f8f8f8;
+        padding: 6px 11px;
+    }
+
+    &__month,
+    &__day {
+        text-align: center;
+        line-height: 1.1;
+        width: 100%;
+    }
+
     &__location {
         color: rgb(60, 60, 60);
-        padding: $grid-col-padding/2 $grid-col-padding $grid-col-padding;
+        padding: 0 $grid-col-padding $grid-col-padding*3.2;
     }
 
     &__img {
@@ -43,8 +61,6 @@ $color-event-title-hover: darken($color-event-title, 10) !default;
     }
 }
 
-@media screen and (min-width: 800px) {
-    .event__title {
-        min-height: 58px;
-    }
+h3.event__title {
+    margin-bottom: 0;
 }

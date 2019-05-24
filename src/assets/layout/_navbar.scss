@@ -6,7 +6,7 @@ $navbar-burger-height-width: 3.25rem !default;    // navbar burger size
 $navbar-img-max-height: 1.75rem !default;         // maximum height for imgs in navbar
 $navbar-font-size: .875rem !default;              // navbar font-size
 $navbar-large-screen-font-size: .875rem !default; // navbar font-size for large screens
-$navbar-font-family: 'Montserrat', sans-serif !default;     // navbar font-family
+$navbar-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;     // navbar font-family
 $navbar-brand-font-size: 1.5rem !default;         // navbar font-size for brand text
 
 // COLORS ======================================================
@@ -134,16 +134,24 @@ a.navbar-item {
 a.navbar-item,
 .navbar-link {
   &:hover,
-  &.is-active {
+  &.is-active,
+  &:focus {
     background-color: $nbc-item-active;
     color: $nc-item-active;
   }
 }
 
-  a.navbar-item.is-active:not(:hover),
-  .navbar-link.is-active:not(:hover) {
-    background-color: $nbc-item-active-not-hover;
-  }
+.navbar-link:focus + .navbar-dropdown,
+.navbar-link[aria-expanded="true"],
+.navbar-dropdown[aria-expanded="true"] {
+  visibility: visible;
+}
+
+
+// a.navbar-item.is-active:not(:hover),
+// .navbar-link.is-active:not(:hover) {
+//   background-color: $nbc-item-active-not-hover;
+// }
 
 .navbar-item {
   flex-grow: 0;
@@ -263,13 +271,16 @@ a.navbar-item,
     }
 
     &.is-active .navbar-dropdown,
-    &.is-hoverable:hover .navbar-dropdown {
-      display: block;
+    &.is-hoverable:hover .navbar-dropdown,
+    &:focus-within {
+      opacity: 1;
+      visibility: visible;
     }
 
     &.is-active .navbar-dropdown.is-boxed,
     &.is-hoverable:hover .navbar-dropdown.is-boxed {
       opacity: 1;
+      visibility: visible;
       pointer-events: auto;
       transform: translateY(0);
     }
@@ -312,7 +323,7 @@ a.navbar-item,
     border-bottom-right-radius: 5px;
     border-top: 1px solid #dbdbdb;
     box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
-    display: none;
+    visibility: hidden;
     font-size: 0.875rem;
     left: 0;
     min-width: 100%;
@@ -326,7 +337,8 @@ a.navbar-item,
     }
 
     a.navbar-item {
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $nbc-item-active;
         color: $nc-item-active;
       }

@@ -2,6 +2,7 @@ $bgc-body: rgba(255, 255, 255, 0.87) !default;
 
 html {
     color: rgb(29, 29, 29);
+    font-family: $content-font;
 }
 
 h1,
@@ -11,8 +12,8 @@ h4,
 h5,
 h6 {
     font-family: $heading-font;
-    margin: 0;
-    padding: 0 0 .67em;
+    padding: 0;
+    margin: 0 0 .67em;
 }
 
 .is-card {
@@ -28,8 +29,8 @@ h6 {
 }
 
 p {
-    margin: 0;
-    padding: .67em 0;
+    padding: 0;
+    margin: .67em 0;
 }
 
 input {
@@ -42,11 +43,87 @@ body {
 
 .white-text {
     color: #fff;
-    display: none;
+    // display: none;
 }
 
 .vertically-center {
     display:flex;
     justify-content:center;
     align-items:center;
+}
+
+.screen-reader {
+  border: 0;
+  clip: rect(1px,1px,1px,1px);
+  clip-path: inset( 50% );
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+
+.share {
+  display: inline;
+  padding-left: .512rem;
+  padding-right: .512rem;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &-container {
+      margin-bottom: 1.1rem;
+  }
+}
+
+img.lozad {
+    @if attr(data-loaded) {
+        filter: none;
+    } @else {
+        filter: blur(25px);
+    }
+}
+
+.media{
+    max-width: 100%;
+    height: auto;
+}
+  
+.media--embed{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.is-padded-table tr > td {
+    vertical-align: top;
+    padding: 20px 5px;
+}
+
+.is-padded-list > li {
+    padding-bottom: 15px;
+}
+
+// .navbar-item {
+//     font-weight: bold;
+// }
+
+.navbar-dropdown > .navbar-item {
+    font-size: .95rem;
 }

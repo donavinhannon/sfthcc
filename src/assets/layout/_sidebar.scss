@@ -7,14 +7,6 @@ $bgc-sidebar-widget: rgb(224, 224, 224) !default;
         border-radius: 2px;
         margin-bottom: 1.5rem;
         padding: $grid-col-padding;
-
-        &:nth-child(odd) {
-            // background: transparentize(lighten($color-primary, 0),.75);
-        }
-
-        &:nth-child(even) {
-            // background: transparentize(darken($color-secondary, 5),0);
-        }
     }
 
     &__title {
@@ -29,8 +21,29 @@ $bgc-sidebar-widget: rgb(224, 224, 224) !default;
 
 }
 
+// Not working with sticky sidebar
+// @media screen and (min-width:768px) {
+//     .sidebar__widget {
+//         float: left;
+//         width: 48%;
+//         margin-right: 2%;
+//     }
+// }
+
+
 @media only screen and (min-width: 800px) {
     .sidebar {
         margin-left: $grid-col-padding*3;
+    }
+
+    // Not working with sticky sidebar
+    // .sidebar__widget {
+    //     width: 100%;
+    // }
+}
+
+@media screen and (min-width: 1174px) {
+    .sidebar {
+        font-size: 18px;
     }
 }
