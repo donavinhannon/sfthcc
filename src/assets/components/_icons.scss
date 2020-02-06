@@ -20,7 +20,13 @@
   }
   */
    
-   [class^="icon-"]::before, [class*=" icon-"]::before {
+   [class^="icon-"]::before, [class*=" icon-"]::before,
+   a[href$=".pdf"]::after,
+   a[href$=".jpeg"]::after,
+   a[href$=".jpg"]::after,
+   a[href$=".png"]::after,
+   a[href$=".gif"]::after,
+   a[href$=".svg"]::after {
     font-family: "fontello";
     font-style: normal;
     font-weight: normal;
@@ -55,16 +61,22 @@
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
   }
 
+  // puts pdf icon after pdf links automatically
   a[href$=".pdf"]::after {
-    content: '\f1c1';
+    content: ' \f1c1';
   }
 
+  // puts image icon after image links
   a[href$=".jpeg"]::after,
   a[href$=".jpg"]::after,
   a[href$=".png"]::after,
   a[href$=".gif"]::after,
   a[href$=".svg"]::after {
-    content: '\f1c5';
+    content: ' \f1c5';
+  }
+
+  .a-no-link:after {
+    content: '' !important;
   }
    
   .icon-location::before { content: '\e800'; } /* '' */

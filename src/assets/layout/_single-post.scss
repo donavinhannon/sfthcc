@@ -1,0 +1,24 @@
+$color-news-title: rgb(129, 125, 125) !default;
+$color-news-title-hover: darken($color-news-title, 5) !default;
+
+article.post-type-post h3.news__title {
+    color: $color-news-title;
+    padding-bottom: 0;
+    padding-top: .67rem;
+    border-bottom: none;
+    box-shadow: none;
+
+    &:first-of-type {
+        padding-top: 0;
+    }
+
+    & a {
+        color: $color-news-title;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-news-title-hover;
+            text-decoration: underline;
+        }
+    }
+}

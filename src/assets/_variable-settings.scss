@@ -19,10 +19,10 @@ $size-main-title: 2.25rem;
 
 // BACKGROUND COLORS
 $bgc-footer: rgb(238, 238, 238);
-$bg-header-mobile: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/uploads/2018/04/sf_sunrise_mobile.jpg');
-$bg-header-laptop: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/uploads/2018/04/sf_sunrise_laptop.jpg');
-$bg-header-hd: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/uploads/2018/04/sf_sunrise_hd.jpg');
-$bg-header-fullhd: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/wp-content/uploads/2018/04/sf_sunrise_fullhd.jpg');
+$bg-header-mobile: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('/wp-content/uploads/2018/04/sf_sunrise_mobile.jpg');
+$bg-header-laptop: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('/wp-content/uploads/2018/04/sf_sunrise_laptop.jpg');
+$bg-header-hd: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('/wp-content/uploads/2018/04/sf_sunrise_hd.jpg');
+$bg-header-fullhd: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url('/wp-content/uploads/2018/04/sf_sunrise_fullhd.jpg');
 $bgc-body: rgba(255, 255, 255, 0.87);//transparentize(#8F2B2B, .2);
 $bgc-sidebar-widget: $bgc-footer;
 // /wp-content/uploads/2018/04/

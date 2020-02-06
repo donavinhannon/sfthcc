@@ -1,0 +1,92 @@
+.sidebar #full_name, .sidebar #email_address {background-color:#fff;}
+.is-padded-ul > li {padding-bottom: 5px;}
+.is-padded-ul li ul li  {padding-top: 5px;}
+.main ul li {padding-bottom:5px;}
+.main ul li ul li {padding-top:5px;}
+.main__title{padding-bottom:0 !important;margin-bottom:1rem !important;}
+.header--page {
+	margin: 0 0 10px;
+}
+.btn--fb:hover{background-color:#1497ff !important;}
+.btn--secondary{background-color:#d89700 !important;}
+.btn--secondary:hover{background-color:#F6AA00 !important;}
+
+.page-content h3:not(.newsletter__title),
+.page-content h4,
+.page-content h5,
+.page-content h6,
+.content h3:not(.newsletter__title),
+.content h4,
+.content h5,
+.content h6{
+    color: #111 !important;
+}
+h3:not(.event__title):not(.newsletter__title):not(.sidebar__title){
+	font-size:1.5rem;
+	font-weight: 600;
+}
+
+.event__date-box {
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+	width: 56px;
+	height: 56px;
+}
+
+@media screen and (max-width: 768px) {
+	.page-content{
+		overflow:hidden;
+	}
+	.sidebar {
+		overflow: hidden;
+	}
+	.col {
+		margin-bottom: 10px; 
+	}
+}
+
+.max-100 {
+	max-width: 100% !important;
+}
+
+article.post-type-post a {
+    border-bottom: 1px solid 
+#E9B589;
+-webkit-box-shadow: inset 0 -2px 0px 0px #E9B589;
+box-shadow: inset 0 -2px 0px 0px
+#E9B589;
+color:
+    #1d1d1d;
+    width: 100%;
+    padding: 0 2px;
+    -webkit-transition: all 100ms cubic-bezier(0.4,0,0.2,1);
+    transition: all 100ms cubic-bezier(0.4,0,0.2,1);
+    text-decoration: none;
+}
+
+
+article.post-type-post a:hover, article.post-type-post a:focus, article.post-type-post a:active{
+    background: #E9B589;
+color: #1d1d1d;
+}
+
+p {margin: 1.1em 0 !important;}
+
+
+@media screen and (max-width: 672px){
+	.logo--home{
+	  height: 170px;
+		width: 170px;
+  }
+}
+
+@media screen and (min-width: 673px){
+.logo--home{
+	height: 300px;
+  width: 300px;
+}	
+}
+
+a.navbar-item:hover, a.navbar-item.is-active, a.navbar-item:focus, .navbar-link:hover, .navbar-link.is-active, .navbar-link:focus {
+	color: #fff !important;
+}
+

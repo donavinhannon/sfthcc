@@ -1,12 +1,13 @@
-$bg-header: #2e5a72 !default;
+$bg-header: #288585 !default;
 $mobile: 672px;
 $laptop: 1366px;
 $hd: 1920;
 
 .header {
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: auto;
+  background-repeat: repeat;
   text-align: center;
+  padding: 2rem 0;
   margin: 0;
 
   h1.header__title,
@@ -15,9 +16,10 @@ $hd: 1920;
     color: #fff;
   }
 
-  &--home {
+  &--img {
     background-color: $bg-header;
-    padding: 2rem 0;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &--single-page {
@@ -35,6 +37,10 @@ $hd: 1920;
     color: #fff;
     font-size: 1.5rem;
     padding: $grid-col-padding;
+  }
+
+  &__title:only-child {
+    margin-bottom: 0;
   }
 
   &__subtitle {
